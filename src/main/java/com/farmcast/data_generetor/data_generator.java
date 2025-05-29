@@ -5,11 +5,17 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import com.google.gson.*;
+
+import io.github.cdimascio.dotenv.Dotenv;
+
 import com.farmcast.ddata.*;
 
 public class data_generator {
     public static String get_data(double lat, double lon){
-        String apikey = "349ac6e12c04f51d049b24303a3dbd12";
+        
+        Dotenv dotenv = Dotenv.load();
+        String apikey = dotenv.get("APIKEY");
+        
         // double lat = 24.000715306825846, lon = 72.48892137646993;
         String url = String.format("http://api.openweathermap.org/data/2.5/forecast?lat=%s&lon=%s&appid=%s&units=metric",lat,lon,apikey);
 
