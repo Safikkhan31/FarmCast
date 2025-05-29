@@ -1,0 +1,9 @@
+com\farmcast\ddata\wind.class
+com\farmcast\Main.class
+com\farmcast\ddata\data.class
+com\farmcast\ddata\clouds.class
+com\farmcast\messenger\messenger.class
+com\farmcast\data_generetor\data_generator.class
+com\farmcast\ddata\weather.class
+com\farmcast\ddata\instance_data.class
+com\farmcast\ddata\main_data.class
