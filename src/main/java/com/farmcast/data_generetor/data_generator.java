@@ -11,7 +11,7 @@ import io.github.cdimascio.dotenv.Dotenv;
 import com.farmcast.ddata.*;
 
 public class data_generator {
-    public static String get_data(double lat, double lon){
+    public String get_data(double lat, double lon){
         
         Dotenv dotenv = Dotenv.load();
         String apikey = dotenv.get("APIKEY");

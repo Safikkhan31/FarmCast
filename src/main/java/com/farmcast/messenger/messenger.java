@@ -13,12 +13,12 @@ public class messenger {
     //                  .directory("../.gitignore/")
     //                  .filename(".env")
     //                  .load();
-    static Dotenv dotenv = Dotenv.load();
-    public static final String ACCOUNT_SID = dotenv.get("TWILIO_ACCOUNT_SID");
-    public static final String AUTH_TOKEN = dotenv.get("TWILIO_AUTH_TOKEN");
-    public static final String twilio_number = dotenv.get("TWILIO_NUMBER");
+    Dotenv dotenv = Dotenv.load();
+    public final String ACCOUNT_SID = dotenv.get("TWILIO_ACCOUNT_SID");
+    public final String AUTH_TOKEN = dotenv.get("TWILIO_AUTH_TOKEN");
+    public final String twilio_number = dotenv.get("TWILIO_NUMBER");
 
-    public static void send(String phone_no_farmer, String messege){
+    public void send(String phone_no_farmer, String messege){
 
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
