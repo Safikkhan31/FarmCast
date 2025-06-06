@@ -16,7 +16,6 @@ public class data_generator {
         Dotenv dotenv = Dotenv.load();
         String apikey = dotenv.get("APIKEY");
         
-        // double lat = 24.000715306825846, lon = 72.48892137646993;
         String url = String.format("http://api.openweathermap.org/data/2.5/forecast?lat=%s&lon=%s&appid=%s&units=metric",lat,lon,apikey);
 
 

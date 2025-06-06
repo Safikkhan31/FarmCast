@@ -9,14 +9,10 @@ import io.github.cdimascio.dotenv.Dotenv;
 
 public class messenger {
 
-    // static Dotenv dotenv = Dotenv.configure()
-    //                  .directory("../.gitignore/")
-    //                  .filename(".env")
-    //                  .load();
     Dotenv dotenv = Dotenv.load();
-    public final String ACCOUNT_SID = dotenv.get("TWILIO_ACCOUNT_SID");
-    public final String AUTH_TOKEN = dotenv.get("TWILIO_AUTH_TOKEN");
-    public final String twilio_number = dotenv.get("TWILIO_NUMBER");
+    String ACCOUNT_SID = dotenv.get("ACCOUNT_SID");
+    String AUTH_TOKEN = dotenv.get("AUTH_TOKEN");
+    String twilio_number = dotenv.get("NUMBER");
 
     public void send(String phone_no_farmer, String messege){
 
@@ -29,11 +25,13 @@ public class messenger {
                     new PhoneNumber("whatsapp:"+twilio_number),         // Twilio sandbox number
                     messege
             ).create();
+
             
             System.out.println("Message sent! SID: " + message.getSid());
 
         } catch (final ApiException e) {
             System.err.println(e);
+            e.printStackTrace();
         }
 
         
