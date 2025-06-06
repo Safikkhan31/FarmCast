@@ -106,7 +106,7 @@ Make sure `.env` is configured and the MySQL database is initialized.
 ### ✅ With Maven
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.farmcast.App"
+./mvnw exec:java
 ```
 
 ### ✅ From JAR
