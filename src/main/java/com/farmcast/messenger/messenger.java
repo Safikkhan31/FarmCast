@@ -27,11 +27,10 @@ public class messenger {
             ).create();
 
             
-            System.out.println("Message sent! SID: " + message.getSid());
+            System.out.println("Message sent! SID: " + message.getSid() + "\n");
 
         } catch (final ApiException e) {
-            System.err.println(e);
-            e.printStackTrace();
+            System.err.println(e + "\n");
         }
 
         

@@ -2,9 +2,6 @@ package com.farmcast;
 import com.farmcast.data_generetor.data_generator;
 import com.farmcast.messenger.messenger;
 import org.junit.Test;
-import org.junit.experimental.theories.suppliers.TestedOn;
-
-import com.farmcast.Main;
 
 public class AppTest{
     // @Test
@@ -22,8 +19,8 @@ public class AppTest{
 
     @Test
     public void test_main(){
-        Main m = new Main();
-        m.routine();
-        // Main.main(null);
+        // Main m = new Main();
+        // m.routine();
+        Main.main(null);
     }
 }

@@ -15,8 +15,10 @@ public class data_generator {
         
         Dotenv dotenv = Dotenv.load();
         String apikey = dotenv.get("APIKEY");
+
+        String language = "hi";
         
-        String url = String.format("http://api.openweathermap.org/data/2.5/forecast?lat=%s&lon=%s&appid=%s&units=metric",lat,lon,apikey);
+        String url = String.format("http://api.openweathermap.org/data/2.5/forecast?lat=%s&lon=%s&lang=%s&appid=%s&units=metric",lat,lon,language,apikey);
 
 
         HttpClient client = HttpClient.newHttpClient();
